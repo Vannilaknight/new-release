@@ -1,0 +1,50 @@
+@import 'https://fonts.googleapis.com/css?family=Lobster|Poiret+One';
+
+$lobsterFont: "Lobster";
+$poiretFont: "Poiret One";
+
+$primary: #456F74;
+$primary-dim: darken($primary, 10%);
+$primary-dark: darken($primary, 50%);
+
+$secondary: #EB5937;
+$secondary-dim: darken($secondary, 10%);
+$secondary-dark: darken($secondary, 50%);
+
+$dark: #1C1919;
+$gray: #403d3c;
+
+$light: #D3CBBD;
+$light-dim: darken($light, 10%);
+$light-dark: darken($light, 50%);
+
+$white: #ededed;
+
+@mixin gradient-border($color1, $color2, $border-width, $direction) {
+  border: none;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#{$direction}, $color1 0%, $color2 100%), linear-gradient(#{$direction}, $color1 0%, $color2 100%);
+  @if $direction == 'to right' or $direction == 'to left' {
+    @if $direction == 'to right' {
+      border-left: $border-width solid $color1;
+      border-right: $border-width solid $color2;
+    } @else {
+      border-left: $border-width solid $color2;
+      border-right: $border-width solid $color1;
+    }
+    background-position: 0 0, 0 100%;
+    background-size: 100% $border-width;
+  }
+
+  @if $direction == 'to top' or $direction == 'to bottom' {
+    @if $direction == 'to top' {
+      border-top: $border-width solid $color2;
+      border-bottom: $border-width solid $color1;
+    } @else {
+      border-top: $border-width solid $color1;
+      border-bottom: $border-width solid $color2;
+    }
+    background-position: 0 0, 100% 0;
+    background-size: $border-width 100%;
+  }
+}

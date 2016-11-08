@@ -1,0 +1,8 @@
+.container
+    .col-lg-12
+        .col-md-4(ng-repeat="release in releases | orderBy: 'timeLeft' | datePassed")
+            .card.col-md-12
+                h2.h {{release.title}}
+                h3.h Days Left:
+                    span.data  {{release.timeLeft}}
+

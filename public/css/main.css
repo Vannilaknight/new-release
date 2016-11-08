@@ -1,0 +1,21 @@
+@import 'https://fonts.googleapis.com/css?family=Lobster|Poiret+One';
+body {
+  margin-top: 50px;
+  font-family: "Poiret One";
+  background-color: #000; }
+
+.h {
+  color: #FF358B; }
+
+.data {
+  color: #01B0F0; }
+
+.card {
+  border: none;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, #FF358B 0%, #01B0F0 100%), linear-gradient(to right, #FF358B 0%, #01B0F0 100%);
+  border-left: 1px solid #FF358B;
+  border-right: 1px solid #01B0F0;
+  background-position: 0 0, 0 100%;
+  background-size: 100% 1px;
+  border-radius: 5px; }

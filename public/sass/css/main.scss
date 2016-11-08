@@ -1,0 +1,21 @@
+@import "bourbon/bourbon";
+@import "colorScheme";
+
+body {
+  margin-top: 50px;
+  font-family: $poiretFont;
+  background-color: #000;
+}
+
+.h {
+  color: #FF358B;
+}
+
+.data {
+  color: #01B0F0;
+}
+
+.card {
+  @include gradient-border(#FF358B, #01B0F0, 1px, 'to right');
+  border-radius: 5px;
+}
